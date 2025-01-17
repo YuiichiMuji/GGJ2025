@@ -6,6 +6,7 @@ public class Shooter : MonoBehaviour
 {
     public GameObject bubblePrefab;
     public float shootSpeed = 10f;
+    public float lifetime = 1;
 
     void Update()
     {
@@ -17,16 +18,13 @@ public class Shooter : MonoBehaviour
 
     void ShootBubble()
     {
-        // Create the Bubble instance
         GameObject bubble = Instantiate(bubblePrefab, transform.position, Quaternion.identity);
 
-        // Get the Rigidbody2D component of the Bubble
         Rigidbody2D rb = bubble.GetComponent<Rigidbody2D>();
 
         if (rb != null)
         {
-            // Set the velocity directly
-            Vector2 direction = transform.up; // The direction the shooter is facing
+            Vector2 direction = transform.up;
             rb.velocity = direction * shootSpeed;
         }
         else

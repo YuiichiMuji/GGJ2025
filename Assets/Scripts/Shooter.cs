@@ -5,10 +5,10 @@ using UnityEngine;
 public class BallBounce : MonoBehaviour
 {
     private Rigidbody2D rb;
+    public float lifetime = 1.0f;
 
     void Awake()
     {
-        // Attempt to get the Rigidbody2D component attached to this object
         rb = GetComponent<Rigidbody2D>();
 
         if (rb == null)
@@ -17,11 +17,18 @@ public class BallBounce : MonoBehaviour
         }
     }
 
-    // Called when the Bubble collides with another collider
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        // Destroy the Bubble when it hits something
         if (collision.gameObject.CompareTag("DeathSurface"))
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    void Update()
+    {
+        lifetime -= Time.deltaTime;
+        if (lifetime <= 0)
         {
             Destroy(gameObject);
         }
