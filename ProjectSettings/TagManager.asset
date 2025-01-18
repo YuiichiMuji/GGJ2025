@@ -9,6 +9,7 @@ TagManager:
   - Bubble
   - WL
   - WR
+  - B-S
   layers:
   - Default
   - TransparentFX

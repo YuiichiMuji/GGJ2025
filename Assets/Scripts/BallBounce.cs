@@ -24,10 +24,9 @@ public class BallBounce : MonoBehaviour
         if (collision.gameObject.CompareTag("DeathSurface"))
         {
             Destroy(gameObject);
+            collide = true;
         }
-        collide = true;
     }
-
     void Update()
     {
         lifetime -= Time.deltaTime;
