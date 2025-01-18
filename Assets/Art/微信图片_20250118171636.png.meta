@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 6a3e49d389140664585ac0ef7a1bf8b7
+guid: 330a4d5a558578e4c91d833c0c2c706f
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -47,8 +47,8 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
-  spriteBorder: {x: 60, y: 144, z: 229, w: 43}
+  spritePixelsToUnits: 50
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
@@ -70,7 +70,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -93,13 +93,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "\u683C\u5B50 (2)_0"
+      name: "\u5FAE\u4FE1\u56FE\u7247_20250118171636_0"
       rect:
         serializedVersion: 2
-        x: 25
-        y: 188
-        width: 405
-        height: 280
+        x: 6
+        y: 0
+        width: 67
+        height: 15
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -107,8 +107,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 08af066e36d8c564e9aaf25091a04b16
-      internalID: 671884892
+      spriteID: bfd0d639ec381cc48889433fa585fc30
+      internalID: 714643563
       vertices: []
       indices: 
       edges: []
@@ -117,14 +117,16 @@ TextureImporter:
     physicsShape: []
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
-    internalID: 1537655665
+    internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      "\u683C\u5B50 (2)_0": 671884892
+      "\u5FAE\u4FE1\u56FE\u7247_20250118171636_0": 714643563
+      "\u5FAE\u4FE1\u56FE\u7247_20250118171636_1": 1476931396
+      "\u5FAE\u4FE1\u56FE\u7247_20250118171636_2": -962870196
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
