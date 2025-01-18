@@ -3,19 +3,31 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
-[CreateAssetMenu]
+[CreateAssetMenu(menuName = "Scriptable object/item")]
 
-public class Item : MonoBehaviour
+public class Item : ScriptableObject
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    [Header("Only Gameplay")]
+
+    public TileBase tile;
+    public ItemType type;
+    public ActionType actionType;
+    public Vector2Int range = new Vector2Int(5, 4);
+
+    [Header("Only Ui")]
+
+    public bool stackable = true;
+
+    [Header("Both")]
+    public Sprite image;
+}
+
+public enum ItemType
+{
+    BuildingBlock
+}
+public enum ActionType 
+{
+    Place
 }
