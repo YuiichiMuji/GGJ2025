@@ -5,19 +5,40 @@ using UnityEngine;
 
 public class SaveManager
 {
-    public static SaveManager Instance;
+    public static int LevelCount;
+    private static SaveManager instance;
 
-    public List<bool> levelStatusList;
+    public static SaveManager Instance
+    {
+        get
+        {
+            if (instance == null)
+            {
+                instance = new SaveManager();
+            }
+            return instance;
+        }
+    }
+
+    public List<int> levelStatusList;
 
     public void SetLevelSuccess(int levelIndex)
     {
-
+        PlayerPrefs.SetInt($"success_level_{levelIndex}", 1);
     }
 
-    private void Init()
+    public bool GetLevelStatus(int levelIndex)
     {
-        Instance = this;
+        var resultValue = PlayerPrefs.GetInt($"success_level_{levelIndex}", 0);
+        return resultValue != 0;
+    }
 
-
+    public SaveManager()
+    {
+        levelStatusList = new List<int>();
+        for (int i = 0; i < LevelCount; i++)
+        {
+            levelStatusList.Add(PlayerPrefs.GetInt($"success_level_{i}", 0));
+        }
     }
 }
