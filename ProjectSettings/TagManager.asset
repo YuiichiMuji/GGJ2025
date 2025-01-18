@@ -10,6 +10,7 @@ TagManager:
   - WL
   - WR
   - B-S
+  - LvlManager
   layers:
   - Default
   - TransparentFX

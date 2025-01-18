@@ -2,12 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WindBlower : MonoBehaviour
+public class Rotate : MonoBehaviour
 {
     public float turnAngle = 90f;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        Debug.Log("S");
         if (other.CompareTag("Bubble"))
         {
             Rigidbody2D rb = other.GetComponent<Rigidbody2D>();
