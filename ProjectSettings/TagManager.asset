@@ -11,6 +11,7 @@ TagManager:
   - WR
   - B-S
   - LvlManager
+  - Split
   layers:
   - Default
   - TransparentFX

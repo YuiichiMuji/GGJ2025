@@ -8,7 +8,6 @@ public class Rotate : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("S");
         if (other.CompareTag("Bubble"))
         {
             Rigidbody2D rb = other.GetComponent<Rigidbody2D>();
