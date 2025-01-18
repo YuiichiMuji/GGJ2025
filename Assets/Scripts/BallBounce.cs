@@ -2,35 +2,40 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Shooter : MonoBehaviour
+public class BallBounce : MonoBehaviour
 {
-    public GameObject bubblePrefab;
-    public float shootSpeed = 10f;
-    public float lifetime = 1;
-
-    void Update()
+    private Rigidbody2D rb;
+    public float lifetime;
+    private bool collide = false;
+    public Animator animator;
+    
+    void Awake()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        rb = GetComponent<Rigidbody2D>();
+
+        if (rb == null)
         {
-            ShootBubble();
+            Debug.LogError("Rigidbody2D component is missing on the Bubble prefab!", this);
         }
     }
 
-    void ShootBubble()
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        GameObject bubble = Instantiate(bubblePrefab, transform.position, Quaternion.identity);
-
-        Rigidbody2D rb = bubble.GetComponent<Rigidbody2D>();
-
-        if (rb != null)
+        if (collision.gameObject.CompareTag("DeathSurface"))
         {
-            Vector2 direction = transform.up;
-            rb.velocity = direction * shootSpeed;
+            Destroy(gameObject);
         }
-        else
+        collide = true;
+    }
+
+    void Update()
+    {
+        lifetime -= Time.deltaTime;
+        if (lifetime <= 0)
         {
-            Debug.LogError("Rigidbody2D component not found on the bubble!");
+            Destroy(gameObject);
         }
+        animator.SetBool("bounce", collide);
     }
 }
 
