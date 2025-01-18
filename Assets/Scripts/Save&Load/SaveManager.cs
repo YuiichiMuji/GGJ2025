@@ -22,11 +22,20 @@ public class SaveManager
 
     public List<int> levelStatusList;
 
+    /// <summary>
+    /// 设置关卡完成
+    /// </summary>
+    /// <param name="levelIndex"></param>
     public void SetLevelSuccess(int levelIndex)
     {
         PlayerPrefs.SetInt($"success_level_{levelIndex}", 1);
     }
 
+    /// <summary>
+    /// 获取关卡情况
+    /// </summary>
+    /// <param name="levelIndex"></param>
+    /// <returns>true-完成，false-未完成</returns>
     public bool GetLevelStatus(int levelIndex)
     {
         var resultValue = PlayerPrefs.GetInt($"success_level_{levelIndex}", 0);
