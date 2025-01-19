@@ -19,4 +19,8 @@ public class StartGame : MonoBehaviour
     {
         sound = GameObject.FindWithTag("sound").GetComponent<SoundManager>();
     }
+    public void Tutorial()
+    {
+        SceneManager.LoadScene("Tutorialscene");
+    }
 }

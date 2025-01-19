@@ -48,7 +48,7 @@ MonoBehaviour:
   sound: {fileID: 143386902654629597}
   fail_1: {fileID: 8300000, guid: fa951b99fe9d9c447880c5d011deea54, type: 3}
   fail_2: {fileID: 8300000, guid: 867c9f66b506829418c6ee4ded92b77a, type: 3}
-  win: {fileID: 8300000, guid: 0a2c03a57e2f87e40b759ccba6bce8fa, type: 3}
+  Win: {fileID: 8300000, guid: 0a2c03a57e2f87e40b759ccba6bce8fa, type: 3}
   break_: {fileID: 8300000, guid: 04978c9ec76dfb4449f505ab59a51d13, type: 3}
   output: {fileID: 8300000, guid: b6c213c3f73b1e64ea0128120d9fc143, type: 3}
   click_1: {fileID: 8300000, guid: 432214dc4164b234c991c835620d2a98, type: 3}
