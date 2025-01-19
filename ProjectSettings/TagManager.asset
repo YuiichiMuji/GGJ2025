@@ -12,6 +12,7 @@ TagManager:
   - B-S
   - LvlManager
   - Split
+  - sound
   layers:
   - Default
   - TransparentFX
