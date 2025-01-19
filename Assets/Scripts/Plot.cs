@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class Plot : MonoBehaviour
 {
@@ -10,6 +12,7 @@ public class Plot : MonoBehaviour
 
     private GameObject wall;
     private Color startColor;
+    public int chance = 1;
 
     private void Start()
     {
@@ -26,11 +29,23 @@ public class Plot : MonoBehaviour
         sr.color = startColor;
     }
 
+
     private void OnMouseDown()
     {
         if (wall != null) return;
 
-        GameObject tempWall = BuildManager.main.getSelectedWall();
-        wall = Instantiate(tempWall, transform.position, Quaternion.identity);
+
+
+        if (chance > 0)
+        {
+            GameObject tempWall = BuildManager.main.getSelectedWall();
+            wall = Instantiate(tempWall, transform.position, Quaternion.identity);
+            chance -= 1;
+            Debug.Log(chance);
+        }
     }
+
+
 }
+
+
