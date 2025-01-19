@@ -7,12 +7,13 @@ public class WinMenu : MonoBehaviour
 {
     public GameObject winMenu;
     public Finish finish;
-
+    SoundManager sound;
     // Start is called before the first frame update
     void Start()
     {
         winMenu.SetActive(false);
         finish = FindObjectOfType<Finish>();
+        sound = GameObject.FindWithTag("sound").GetComponent<SoundManager>();
     }
 
     // Update is called once per frame
@@ -28,6 +29,7 @@ public class WinMenu : MonoBehaviour
     {
         Time.timeScale = 0f;
         winMenu.SetActive(true);
+        sound.PlaySound(sound.Win);
     }
     public void quitMenu()
     {
