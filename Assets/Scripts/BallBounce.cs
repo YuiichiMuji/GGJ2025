@@ -26,11 +26,8 @@ public class BallBounce : MonoBehaviour
             Destroy(gameObject);
             collide = true;
         }
-        else
-        {
-            Debug.Log("Live");
-        }
     }
+
     void Update()
     {
         lifetime -= Time.deltaTime;
