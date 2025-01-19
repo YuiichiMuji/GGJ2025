@@ -12,8 +12,6 @@ public class Plot : MonoBehaviour
 
     private GameObject wall;
     private Color startColor;
-    public int chance = 1;
-    SoundManager sound;
 
     private void Start()
     {
@@ -36,19 +34,9 @@ public class Plot : MonoBehaviour
     {
         if (wall != null) return;
 
-
-
-        if (chance > 0)
-        {
-            GameObject tempWall = BuildManager.main.getSelectedWall();
-            wall = Instantiate(tempWall, transform.position, Quaternion.identity);
-            sound.PlaySound(sound.output);
-            chance -= 1;
-            Debug.Log(chance);
-        }
+        GameObject tempWall = BuildManager.main.getSelectedWall();
+        wall = Instantiate(tempWall, transform.position, Quaternion.identity);
     }
-
-
 }
 
 
