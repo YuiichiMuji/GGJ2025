@@ -17,4 +17,12 @@ public class SoundManager : MonoBehaviour
     {
         sound.PlayOneShot(clip);
     }
+
+    private void Update()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            PlaySound(click_1);
+        }
+    }
 }

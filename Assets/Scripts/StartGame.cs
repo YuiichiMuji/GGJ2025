@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class StartGame : MonoBehaviour
 {
+    SoundManager sound;
     public void StartlvlSelect()
     {
         SceneManager.LoadScene("LevelSelect");
@@ -13,5 +14,9 @@ public class StartGame : MonoBehaviour
     public void Quit()
     {
         Application.Quit();
+    }
+    public void Start()
+    {
+        sound = GameObject.FindWithTag("sound").GetComponent<SoundManager>();
     }
 }
