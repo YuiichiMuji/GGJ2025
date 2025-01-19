@@ -12,7 +12,7 @@ public class Plot : MonoBehaviour
 
     private GameObject wall;
     private Color startColor;
-
+    SoundManager sound;
     private void Start()
     {
         startColor = sr.color;
@@ -36,6 +36,7 @@ public class Plot : MonoBehaviour
 
         GameObject tempWall = BuildManager.main.getSelectedWall();
         wall = Instantiate(tempWall, transform.position, Quaternion.identity);
+        sound.PlaySound(sound.output);
     }
 }
 
