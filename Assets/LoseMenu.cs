@@ -7,11 +7,12 @@ public class LoseMenu : MonoBehaviour
 {
     public GameObject loseMenu;
     private bool launch = false;
-
+    SoundManager sound;
     // Start is called before the first frame update
     void Start()
     {
         loseMenu.SetActive(false);
+        sound = GameObject.FindWithTag("sound").GetComponent<SoundManager>();
     }
 
     // Update is called once per frame
@@ -19,6 +20,7 @@ public class LoseMenu : MonoBehaviour
     {
         if ((GameObject.FindWithTag("Bubble") == null) && (launch == true))
         {
+            sound.PlaySound(sound.break_);
             lose();
         }
     }
@@ -27,6 +29,7 @@ public class LoseMenu : MonoBehaviour
     {
         loseMenu.SetActive(true);
         Time.timeScale = 0f;
+        sound.PlaySound(sound.fail_1);
     }
     public void launched()
     {
