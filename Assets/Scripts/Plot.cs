@@ -12,7 +12,6 @@ public class Plot : MonoBehaviour
 
     private GameObject wall;
     private Color startColor;
-    public int chance = 1;
 
     private void Start()
     {
@@ -34,18 +33,9 @@ public class Plot : MonoBehaviour
     {
         if (wall != null) return;
 
-
-
-        if (chance > 0)
-        {
-            GameObject tempWall = BuildManager.main.getSelectedWall();
-            wall = Instantiate(tempWall, transform.position, Quaternion.identity);
-            chance -= 1;
-            Debug.Log(chance);
-        }
+        GameObject tempWall = BuildManager.main.getSelectedWall();
+        wall = Instantiate(tempWall, transform.position, Quaternion.identity);
     }
-
-
 }
 
 
