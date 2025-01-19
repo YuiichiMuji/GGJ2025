@@ -14,10 +14,4 @@ public class Finish : MonoBehaviour
             sound.PlaySound(sound.win);
         }
     }
-
-    public void Start()
-    {
-        sound = GameObject.FindWithTag("sound").GetComponent<SoundManager>();
-    }
-
 }
