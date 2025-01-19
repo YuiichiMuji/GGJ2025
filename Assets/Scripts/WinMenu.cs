@@ -6,18 +6,19 @@ using UnityEngine.SceneManagement;
 public class WinMenu : MonoBehaviour
 {
     public GameObject winMenu;
-    public GameObject finish;
-    public script s = finish.GetComponent<Finish>();
+    public Finish finish;
+
     // Start is called before the first frame update
     void Start()
     {
         winMenu.SetActive(false);
+        finish = FindObjectOfType<Finish>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (finish.win)
+        if (finish.win == true)
         {
             won();
         }
