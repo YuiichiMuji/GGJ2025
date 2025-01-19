@@ -32,9 +32,12 @@ public class Plot : MonoBehaviour
     private void OnMouseDown()
     {
         if (wall != null) return;
-
-        GameObject tempWall = BuildManager.main.getSelectedWall();
-        wall = Instantiate(tempWall, transform.position, Quaternion.identity);
+        if ((GameManager.Instance.allplaced == false) && (GameManager.Instance.pause == false))
+        {
+            GameObject tempWall = BuildManager.main.getSelectedWall();
+            wall = Instantiate(tempWall, transform.position, Quaternion.identity);
+        }
+        
     }
 }
 

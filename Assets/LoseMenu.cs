@@ -26,9 +26,15 @@ public class LoseMenu : MonoBehaviour
     public void lose()
     {
         loseMenu.SetActive(true);
+        Time.timeScale = 0f;
     }
     public void launched()
     {
         launch = true;
+    }
+    public void quit()
+    {
+        loseMenu.SetActive(false);
+        SceneManager.LoadScene("Start Screen");
     }
 }

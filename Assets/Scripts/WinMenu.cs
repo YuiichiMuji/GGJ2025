@@ -31,10 +31,7 @@ public class WinMenu : MonoBehaviour
     }
     public void quitMenu()
     {
+        winMenu.SetActive(false);
         SceneManager.LoadScene("Start Screen");
-    }
-    public void quit()
-    {
-        Debug.Log("Quit");
     }
 }
