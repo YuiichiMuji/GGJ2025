@@ -5,15 +5,8 @@ using UnityEngine;
 public class Shooter : MonoBehaviour
 {
     public GameObject bubblePrefab;
-    public float shootSpeed = 10f;
-
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            ShootBubble();
-        }
-    }
+    public float shootSpeed = 5f;
+    private int chance = 1;
 
     void ShootBubble()
     {
@@ -29,6 +22,15 @@ public class Shooter : MonoBehaviour
         else
         {
             Debug.LogError("Rigidbody2D component not found on the bubble!");
+        }
+    }
+
+    public void Launch()
+    {
+        if (chance == 1)
+        {
+            ShootBubble();
+            chance = 0;
         }
     }
 }
