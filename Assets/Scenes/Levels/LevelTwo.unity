@@ -631,11 +631,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2942086428372438641, guid: 09c652dcc43aaec478822e79ef1b988d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.006
+      value: -1.17
       objectReference: {fileID: 0}
     - target: {fileID: 2942086428372438641, guid: 09c652dcc43aaec478822e79ef1b988d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.08
+      value: 2.01
       objectReference: {fileID: 0}
     - target: {fileID: 2942086428372438641, guid: 09c652dcc43aaec478822e79ef1b988d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -773,6 +773,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c117d54614301f4da31459d8fda79c8, type: 3}
+--- !u!114 &388291216 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1682569143139828991, guid: 9c117d54614301f4da31459d8fda79c8, type: 3}
+  m_PrefabInstance: {fileID: 388291215}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccf03c9938f96a943ad1aeb4cab119f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &403760591
 GameObject:
   m_ObjectHideFlags: 0
@@ -4007,11 +4018,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2942086428372438641, guid: 09c652dcc43aaec478822e79ef1b988d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.15
+      value: -0.013999939
       objectReference: {fileID: 0}
     - target: {fileID: 2942086428372438641, guid: 09c652dcc43aaec478822e79ef1b988d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.079
+      value: 2.009
       objectReference: {fileID: 0}
     - target: {fileID: 2942086428372438641, guid: 09c652dcc43aaec478822e79ef1b988d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4352,6 +4363,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3371561801359700809, guid: 3b1202443b285484bb2cb96999713e7a, type: 3}
+      propertyPath: shooter
+      value: 
+      objectReference: {fileID: 388291216}
     - target: {fileID: 5222923341768604032, guid: 3b1202443b285484bb2cb96999713e7a, type: 3}
       propertyPath: finish
       value: 
