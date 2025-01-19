@@ -10,6 +10,8 @@ public class StartGame : MonoBehaviour
     {
         SceneManager.LoadScene("LevelSelect");
         Time.timeScale = 1f;
+        GameManager.Instance.pause = false;
+        GameManager.Instance.allplaced = false;
     }
     public void Quit()
     {

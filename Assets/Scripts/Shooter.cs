@@ -16,7 +16,7 @@ public class Shooter : MonoBehaviour
 
         if (rb != null)
         {
-            Vector2 direction = transform.up;
+            Vector2 direction = transform.right;
             rb.velocity = direction * shootSpeed;
         }
         else
